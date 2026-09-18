@@ -1,11 +1,11 @@
 package main
 
 import "fmt"
+import "strings"
 
 func main() {
-    // Print the greeting below.
-		var w, h int
-		fmt.Scan(&w)
-		fmt.Scan(&h)
-		fmt.Print(w * h)
+	var word string
+	fmt.Scan(&word)
+	word = strings.ToUpper(word)
+	fmt.Print(word)
 }
