@@ -1,11 +1,16 @@
 package main
 
-import "fmt"
-import "strings"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
 
 func main() {
-	var word string
-	fmt.Scan(&word)
-	word = strings.ToUpper(word)
-	fmt.Print(word)
+	r := bufio.NewReader(os.Stdin)
+	line, _ := r.ReadString('\n')
+	line = strings.TrimRight(line, "\r\n")
+	upperLine := strings.ToUpper(line)
+	fmt.Print(upperLine)
 }
